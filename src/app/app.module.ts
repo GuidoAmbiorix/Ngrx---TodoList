@@ -10,6 +10,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 //Shared
 import { SharedModule } from './shared/shared/shared.module';
 import { FooterComponent } from './footer/footer.component';
+import { TodoModule } from './todos/todo.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FooterComponent } from './footer/footer.component';
     BrowserAnimationsModule,
     StoreModule.forRoot({}, {}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
-    SharedModule
+    SharedModule,
+    TodoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

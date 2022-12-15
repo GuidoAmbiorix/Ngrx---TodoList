@@ -8,7 +8,6 @@ import { TodoPageComponent } from './todo-page/todo-page.component';
 
 //Shared
 import { SharedModule } from '../shared/shared/shared.module';
-import { FooterComponent } from '../footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +16,13 @@ import { FooterComponent } from '../footer/footer.component';
     TodoItemComponent,
     TodoListComponent,
     TodoPageComponent,
-    FooterComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
-
+  ],
+  exports:[
+   TodoPageComponent
   ]
 })
 export class TodoModule { }
